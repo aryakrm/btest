@@ -1,0 +1,128 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+}
+.left {
+  width: 5%;
+  height: 100vh;
+  padding: 2rem;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.left div {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  background-color: gray;
+}
+.left div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left div:nth-child(2) {
+  border-radius: 100%;
+}
+
+.main {
+  width: 75%;
+  height: 100vh;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+  width: 100%;
+  height: 30%;
+  border-bottom: 4px solid rgb(167, 166, 166);
+}
+.text {
+  width: 20rem;
+  height: 6rem;
+  background-color: gray;
+  display: flex;
+  padding-left: 2rem;
+  align-items: center;
+  border-radius: 10px;
+}
+.right {
+  width: 20%;
+  height: 100vh;
+  background-color: rgb(21, 21, 82);
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+.right div {
+  width: 80%;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.hiddenNav {
+  display: none !important;
+  width: 100%;
+  height: 5rem;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.hiddenNav div {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background-color: gray;
+}
+
+@media (max-width: 600px) {
+  .right {
+    display: none;
+  }
+  .left {
+    display: none;
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .hiddenNav {
+    display: block !important;
+  }
+  .nav {
+    border: none;
+  }
+  .text {
+    background-color: lightgray;
+  }
+  .circle {
+    display: block;
+    margin-top: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
